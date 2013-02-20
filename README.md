@@ -45,7 +45,7 @@ cd ~/dotfiles
 chmod +x makesymlinks.sh
 git submodule init
 git submodule update
-sh akesymlinks.sh
+sh makesymlinks.sh
 ```
 
 5) Install node via nvm
