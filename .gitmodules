@@ -1,0 +1,15 @@
+[submodule "vim/bundle/ctrlp.vim"]
+	path = vim/bundle/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim.git
+[submodule "vim/bundle/nerdcommenter.vim"]
+	path = vim/bundle/nerdcommenter.vim
+	url = https://github.com/scrooloose/nerdcommenter.git
+[submodule "vim/bundle/nerdtree.vim"]
+	path = vim/bundle/nerdtree.vim
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "vim/bundle/supertab.vim"]
+	path = vim/bundle/supertab.vim
+	url = https://github.com/ervandew/supertab.git
+[submodule "vim/bundle/ack.vim"]
+	path = vim/bundle/ack.vim
+	url = https://github.com/mileszs/ack.vim.git

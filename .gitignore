@@ -1,0 +1,9 @@
+*.diff
+*.err
+*.orig
+*.log
+.DS_Store
+.cache
+Thumbs.db
+.OLD
+.SAV
