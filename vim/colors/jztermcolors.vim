@@ -66,7 +66,11 @@ hi PmenuThumb cterm=NONE ctermfg=darkgreen ctermbg=lightgrey
 " JS
 hi javaScriptParens cterm=NONE ctermbg=NONE ctermfg=brown
 hi link javaScriptOperator javaScriptParens
+hi link javaScriptStatement javaScriptParens
+hi link javaScriptConditional javaScriptParens
 hi javaScriptIdentifier cterm=NONE ctermbg=NONE ctermfg=lightgreen
+hi link javaScriptFuncArg javaScriptIdentifier
 hi javaScriptFunction cterm=NONE ctermbg=NONE ctermfg=green
+hi link javaScriptFuncKeyword javaScriptFunction
 hi link javaScriptBraces javaScriptFunction
-
+hi javaScriptLineComment cterm=NONE ctermbg=NONE ctermfg=darkgrey

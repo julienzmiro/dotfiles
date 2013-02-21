@@ -191,17 +191,13 @@ nmap ; :CtrlPBuffer<CR>
 " map <Leader>pb :CtrlPBuffer<CR>
 " map <Leader>pm :CtrlPMRU<CR>
 
+" Supertab conf
+let g:SuperTabDefaultCompletionType = '<C-X><C-O>'
+let g:SuperTabDefaultCompletionType = 'context'
+
 if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
   set t_Co=256
 endif
-
-" nmap <Leader>sI :call <SID>SynStack()<CR>
-" function! <SID>SynStack()
-"   if !exists("*synstack")
-"     return
-"   endif
-"   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
-" endfunc
 
 function! InitializeDirectories()
   let separator = "."
