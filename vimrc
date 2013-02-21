@@ -140,6 +140,12 @@ augroup BgHighlight
 augroup END
 autocmd InsertEnter * highlight  Normal cterm=NONE ctermbg=black ctermfg=NONE
 autocmd InsertLeave * highlight  Normal cterm=NONE ctermbg=NONE ctermfg=NONE
+" JS fold
+"au FileType javascript call JavaScriptFold()
+" Unfold all when open
+"autocmd Syntax vim,xml,html,xhtml,js,css setlocal foldmethod=syntax
+"autocmd Syntax vim,xml,html,xhtml,js,css normal zR
+set nofoldenable
 
 " Key mapping
 let mapleader = ','
