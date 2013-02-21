@@ -21,7 +21,7 @@ ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 Then install all formulas
 ``` bash
 brew install git
-brew install macvim
+brew install macvim --override-system-vim
 brew install mongodb
 brew install ack
 brew install bash-completion

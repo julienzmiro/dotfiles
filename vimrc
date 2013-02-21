@@ -5,6 +5,7 @@ set background=dark
 
 " Setup pathogen
 execute pathogen#infect()
+Helptags
 
 " Automatically detect file types
 filetype plugin indent on
@@ -26,6 +27,8 @@ set virtualedit=onemore
 set history=1000
 " spell checking on
 " set spell
+" Hide buffers instead of closing them
+set hidden
 
 " backups are nice ...
 set backup
