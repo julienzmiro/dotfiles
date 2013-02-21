@@ -74,3 +74,16 @@ hi javaScriptFunction cterm=NONE ctermbg=NONE ctermfg=green
 hi link javaScriptFuncKeyword javaScriptFunction
 hi link javaScriptBraces javaScriptFunction
 hi javaScriptLineComment cterm=NONE ctermbg=NONE ctermfg=darkgrey
+" HTML
+hi htmlTag cterm=NONE ctermbg=NONE ctermfg=yellow
+hi link htmlEndTag htmlTag
+hi link htmlTagName htmlTag
+hi htmlArg cterm=NONE ctermbg=NONE ctermfg=lightgreen
+hi htmlComment cterm=NONE ctermbg=NONE ctermfg=darkgrey
+hi link htmlCommentPart htmlComment
+hi htmlH1 cterm=NONE ctermbg=NONE ctermfg=brown
+hi link htmlH2 htmlH1
+hi link htmlH3 htmlH1
+hi link htmlH4 htmlH1
+hi link htmlH5 htmlH1
+hi link htmlH6 htmlH1
