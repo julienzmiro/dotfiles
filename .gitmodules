@@ -19,3 +19,9 @@
 [submodule "vim/bundle/vim-javascript-syntax.vim"]
 	path = vim/bundle/vim-javascript-syntax.vim
 	url = https://github.com/jelera/vim-javascript-syntax.git
+[submodule "vim/bundle/vim-surround.vim"]
+	path = vim/bundle/vim-surround.vim
+	url = https://github.com/tpope/vim-surround.git
+[submodule "vim/bundle/yankring.vim"]
+	path = vim/bundle/yankring.vim
+	url = https://github.com/vim-scripts/YankRing.vim.git

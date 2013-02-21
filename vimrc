@@ -164,6 +164,11 @@ nnoremap <Leader>d :t.<CR>
 " buffer number
 :nnoremap <Leader>b :buffers<CR>:buffer<Space>
 
+" YankRing configuration
+nnoremap <Leader>y :YRShow<CR>
+let g:yankring_replace_n_pkey = '<leader>yp'
+let g:yankring_replace_n_nkey = '<leader>yn'
+
 " NERDTree configuration
 let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
 let NERDTreeShowHidden=1
