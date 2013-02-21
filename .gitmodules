@@ -25,3 +25,4 @@
 [submodule "vim/bundle/yankring.vim"]
 	path = vim/bundle/yankring.vim
 	url = https://github.com/vim-scripts/YankRing.vim.git
+  ignore = dirty
