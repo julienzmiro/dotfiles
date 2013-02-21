@@ -160,6 +160,9 @@ vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
 " Duplicate current line
 nnoremap <Leader>d :t.<CR>
+" Easy buffer nav (type Leader b to show the list of buffers and then type the
+" buffer number
+:nnoremap <Leader>b :buffers<CR>:buffer<Space>
 
 " NERDTree configuration
 let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
