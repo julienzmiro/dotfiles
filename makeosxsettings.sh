@@ -3,8 +3,8 @@
 # Terminal settings
 open "$HOME/dotfiles/jzsettings.terminal"
 sleep 1 # Wait a bit to make sure the theme is loaded
-defaults write com.apple.terminal "Default Window Settings" -string "jzsettings"
-defaults write com.apple.terminal "Startup Window Settings" -string "jzsettings"
+defaults write com.apple.Terminal "Default Window Settings" -string "jzsettings"
+defaults write com.apple.Terminal "Startup Window Settings" -string "jzsettings"
 
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
