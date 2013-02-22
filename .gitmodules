@@ -26,3 +26,6 @@
 	path = vim/bundle/yankring.vim
 	url = https://github.com/vim-scripts/YankRing.vim.git
   ignore = dirty
+[submodule "vim/bundle/rename.vim"]
+	path = vim/bundle/rename.vim
+	url = https://github.com/danro/rename.vim.git
