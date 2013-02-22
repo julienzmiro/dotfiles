@@ -1,10 +1,15 @@
+# Git branch in prompt.
+parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
 print_before_the_prompt ()
 {
-	printf "\n%s : %s\n" "$USER" "$PWD"
+  printf "\n%s : %s\n" "$USER" "$PWD"
 }
 
 PROMPT_COMMAND=print_before_the_prompt
-PS1='->'
+PS1='$(parse_git_branch)->'
 
 export PATH=/usr/local/bin:$PATH
 export PATH=$HOME/local/node/bin:$PATH

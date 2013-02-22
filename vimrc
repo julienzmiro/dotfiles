@@ -146,6 +146,8 @@ autocmd InsertLeave * highlight  Normal cterm=NONE ctermbg=NONE ctermfg=NONE
 "autocmd Syntax vim,xml,html,xhtml,js,css setlocal foldmethod=syntax
 "autocmd Syntax vim,xml,html,xhtml,js,css normal zR
 set nofoldenable
+" Treat JSON as JS
+autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 
 " Key mapping
 let mapleader = ','
