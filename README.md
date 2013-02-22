@@ -34,9 +34,13 @@ cd ~
 git clone git://github.com/julienzmiro/dotfiles.git
 ```
 
-3) Terminal settings
---------------------
-Import ~/dotfiles/jzsettings.terminal in Mac OS terminal settings
+3) Mac & Terminal settings
+--------------------------
+``` bash
+cd ~/dotfiles
+chmod +x makeosxsettings.sh
+sh makeosxsettings.sh
+```
 
 4) Vim and bash
 ---------------
