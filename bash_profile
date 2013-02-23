@@ -5,11 +5,11 @@ parse_git_branch() {
 
 print_before_the_prompt ()
 {
-  printf "\n%s : %s\n" "$USER" "$PWD"
+  printf "\n%s : %s $(parse_git_branch)\n" "$USER" "$PWD"
 }
 
 PROMPT_COMMAND=print_before_the_prompt
-PS1='$(parse_git_branch)->'
+PS1='->'
 
 export PATH=/usr/local/bin:$PATH
 export PATH=$HOME/local/node/bin:$PATH
