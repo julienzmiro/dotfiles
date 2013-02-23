@@ -177,6 +177,7 @@ nnoremap <C-y> 3<C-y>
 
 " YankRing configuration
 nnoremap <Leader>y :YRShow<CR>
+nnoremap Y y$
 let g:yankring_replace_n_pkey = '<leader>yp'
 let g:yankring_replace_n_nkey = '<leader>yn'
 
