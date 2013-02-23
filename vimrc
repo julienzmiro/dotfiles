@@ -188,7 +188,7 @@ map <Leader>c :call NERDComment(0,"toggle")<CR>
 " CtrlP configuration
 " Define a custom root marker (touch .ctrlp)
 let g:ctrlp_root_markers = ['.ctrlp']
-nmap ; :CtrlPBuffer<CR>
+nnoremap ; :CtrlPBuffer<CR>
 " map <Leader>p :CtrlP<CR>
 " map <Leader>pb :CtrlPBuffer<CR>
 " map <Leader>pm :CtrlPMRU<CR>
