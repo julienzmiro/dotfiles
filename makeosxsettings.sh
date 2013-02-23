@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Ask for the administrator password upfront
+sudo -v
+# Keep-alive: update existing `sudo` time stamp until `makeosxsettings` has finished
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
 # Terminal settings
 open "$HOME/dotfiles/jzsettings.terminal"
 sleep 1 # Wait a bit to make sure the theme is loaded
@@ -49,12 +54,16 @@ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 # Top left screen corner → Mission Control
 defaults write com.apple.dock wvous-tl-corner -int 2
 defaults write com.apple.dock wvous-tl-modifier -int 0
-# Top right screen corner → Desktop
-defaults write com.apple.dock wvous-tr-corner -int 4
+# Top right screen corner → Launchpad
+defaults write com.apple.dock wvous-tr-corner -int 11
 defaults write com.apple.dock wvous-tr-modifier -int 0
-# Bottom left screen corner → Start screen saver
-defaults write com.apple.dock wvous-bl-corner -int 11
+# Bottom left screen corner → Show application windows
+defaults write com.apple.dock wvous-bl-corner -int 3
 defaults write com.apple.dock wvous-bl-modifier -int 0
+# Bottom right screen corner → Desktop
+defaults write com.apple.dock wvous-br-corner -int 4
+defaults write com.apple.dock wvous-br-modifier -int 0
+
 
 for app in "Finder" "Terminal"; do
   killall "$app" > /dev/null 2>&1
