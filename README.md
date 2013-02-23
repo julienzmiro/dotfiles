@@ -57,3 +57,16 @@ sh makesymlinks.sh
 ``` bash
 git clone git://github.com/creationix/nvm.git ~/nvm
 ```
+
+How to
+======
+
+Add vim plugins
+---------------
+If you would add autoclose :
+``` bash
+cd ~/dotfiles
+git submodule add https://github.com/Townk/vim-autoclose.git vim/bundle/vim-autoclose.vim
+git submodule init
+git submodule update
+```

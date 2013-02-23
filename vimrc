@@ -171,6 +171,9 @@ nnoremap <Leader>d :t.<CR>
 " Easy buffer nav (type Leader b to show the list of buffers and then type the
 " buffer number
 :nnoremap <Leader>b :buffers<CR>:buffer<Space>
+"Scroll faster
+nnoremap <C-e> 3<C-e>
+nnoremap <C-y> 3<C-y>
 
 " YankRing configuration
 nnoremap <Leader>y :YRShow<CR>
@@ -196,6 +199,12 @@ nnoremap ; :CtrlPBuffer<CR>
 " Supertab conf
 let g:SuperTabDefaultCompletionType = '<C-X><C-O>'
 let g:SuperTabDefaultCompletionType = 'context'
+
+"Load matchit
+runtime macros/matchit.vim
+
+"Display page title
+set title
 
 if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
   set t_Co=256
