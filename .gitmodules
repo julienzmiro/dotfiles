@@ -32,3 +32,6 @@
 [submodule "vim/bundle/vim-autoclose.vim"]
 	path = vim/bundle/vim-autoclose.vim
 	url = https://github.com/Townk/vim-autoclose.git
+[submodule "vim/bundle/html-autoclosetag.vim"]
+	path = vim/bundle/html-autoclosetag.vim
+	url = https://github.com/vim-scripts/HTML-AutoCloseTag.git
