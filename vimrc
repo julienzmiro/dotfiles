@@ -180,6 +180,8 @@ nnoremap <Leader>y :YRShow<CR>
 nnoremap Y y$
 let g:yankring_replace_n_pkey = '<leader>yp'
 let g:yankring_replace_n_nkey = '<leader>yn'
+let g:yankring_share_between_instances = 1
+let g:yankring_persist = 1
 
 " NERDTree configuration
 let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
@@ -238,3 +240,16 @@ function! InitializeDirectories()
   endfor
 endfunction
 call InitializeDirectories()
+
+function s:MkNonExDir(file, buf)
+  if empty(getbufvar(a:buf, '&buftype')) && a:file!~#'\v^\w+\:\/'
+    let dir=fnamemodify(a:file, ':h')
+    if !isdirectory(dir)
+      call mkdir(dir, 'p')
+    endif
+  endif
+endfunction
+augroup BWCCreateDir
+  autocmd!
+  autocmd BufWritePre * :call s:MkNonExDir(expand('<afile>'), +expand('<abuf>'))
+augroup END
