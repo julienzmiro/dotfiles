@@ -174,6 +174,9 @@ nnoremap <Leader>d :t.<CR>
 "Scroll faster
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
+" New line with enter, new line before with shift enter
+nmap <S-Enter> O<Esc>
+nmap <CR> o<Esc>
 
 " YankRing configuration
 nnoremap <Leader>y :YRShow<CR>
