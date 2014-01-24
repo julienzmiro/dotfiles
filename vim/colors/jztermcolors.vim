@@ -19,7 +19,7 @@ let g:colors_name="jztermcolors"
 " color terminal definitions
 hi Todo cterm=NONE ctermfg=black ctermbg=red
 
-hi SpecialKey	ctermfg=darkgrey
+hi SpecialKey	ctermfg=black
 hi NonText	cterm=bold ctermfg=darkblue
 hi Directory	ctermfg=darkcyan
 hi ErrorMsg	cterm=bold ctermfg=7 ctermbg=1
