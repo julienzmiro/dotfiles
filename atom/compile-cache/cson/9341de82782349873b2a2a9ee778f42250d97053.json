@@ -1,0 +1,1 @@
+{"context-menu":{".overlayer":{"Enable hacker-news":"hacker-news:toggle"}},"menu":[{"label":"Packages","submenu":[{"label":"hacker-news","submenu":[{"label":"Top","command":"hacker-news:top"}]}]}]}

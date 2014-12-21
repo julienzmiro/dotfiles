@@ -1,0 +1,108 @@
+(function() {
+  var Os;
+
+  Os = require('os');
+
+  module.exports = {
+    disableNewBufferOnOpen: function(val, force) {
+      return this.config('disableNewFileOnOpen', val, force);
+    },
+    disableNewBufferOnOpenAlways: function(val, force) {
+      return this.config('disableNewFileOnOpenAlways', val, force);
+    },
+    restoreOpenFilesPerProject: function(val, force) {
+      return this.config('restoreOpenFilesPerProject', val, force);
+    },
+    saveFolder: function(val, force) {
+      return this.config('dataSaveFolder', val, force);
+    },
+    restoreProject: function(val, force) {
+      return this.config('restoreProject', val, force);
+    },
+    restoreWindow: function(val, force) {
+      return this.config('restoreWindow', val, force);
+    },
+    restoreFileTreeSize: function(val, force) {
+      return this.config('restoreFileTreeSize', val, force);
+    },
+    restoreOpenFiles: function(val, force) {
+      return this.config('restoreOpenFiles', val, force);
+    },
+    restoreOpenFileContents: function(val, force) {
+      return this.config('restoreOpenFileContents', val, force);
+    },
+    restoreCursor: function(val, force) {
+      return this.config('restoreCursor', val, force);
+    },
+    restoreScrollPos: function(val, force) {
+      return this.config('restoreScrollPosition', val, force);
+    },
+    skipSavePrompt: function(val, force) {
+      return this.config('skipSavePrompt', val, force);
+    },
+    extraDelay: function(val, force) {
+      return this.config('extraDelay', val, force);
+    },
+    project: function(val, force) {
+      return this.config('project', val, force);
+    },
+    windowX: function(val, force) {
+      return this.config('windowX', val, force);
+    },
+    windowY: function(val, force) {
+      return this.config('windowY', val, force);
+    },
+    windowWidth: function(val, force) {
+      return this.config('windowWidth', val, force);
+    },
+    windowHeight: function(val, force) {
+      return this.config('windowHeight', val, force);
+    },
+    treeSize: function(val, force) {
+      return this.config('treeSize', val, force);
+    },
+    saveFolderDefault: function() {
+      return this.saveFolder(atom.packages.getPackageDirPaths() + this.pathSeparator() + 'save-session' + this.pathSeparator() + 'projects');
+    },
+    pathSeparator: function() {
+      if (this.isWindows()) {
+        return '\\';
+      }
+      return '/';
+    },
+    isWindows: function() {
+      return Os.platform() === 'win32';
+    },
+    saveFile: function() {
+      var folder, path;
+      folder = this.saveFolder();
+      if (this.restoreOpenFilesPerProject() && (atom.project.path != null)) {
+        path = this.transformProjectPath(atom.project.path);
+        return folder + this.pathSeparator() + path + this.pathSeparator() + 'project.json';
+      } else {
+        return folder + this.pathSeparator() + 'undefined' + this.pathSeparator() + 'project.json';
+      }
+    },
+    transformProjectPath: function(path) {
+      var colon;
+      if (this.isWindows) {
+        colon = path.indexOf(':');
+        if (colon !== -1) {
+          return path.substring(0, colon) + path.substring(colon + 1, path.length);
+        }
+      }
+      return path;
+    },
+    config: function(key, val, force) {
+      if ((val != null) || ((force != null) && force)) {
+        return atom.config.set('save-session.' + key, val);
+      } else {
+        return atom.config.get('save-session.' + key);
+      }
+    }
+  };
+
+}).call(this);
+
+//# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAiZmlsZSI6ICIiLAogICJzb3VyY2VSb290IjogIiIsCiAgInNvdXJjZXMiOiBbCiAgICAiIgogIF0sCiAgIm5hbWVzIjogW10sCiAgIm1hcHBpbmdzIjogIkFBQUE7QUFBQSxNQUFBLEVBQUE7O0FBQUEsRUFBQSxFQUFBLEdBQUssT0FBQSxDQUFRLElBQVIsQ0FBTCxDQUFBOztBQUFBLEVBRUEsTUFBTSxDQUFDLE9BQVAsR0FHRTtBQUFBLElBQUEsc0JBQUEsRUFBd0IsU0FBQyxHQUFELEVBQU0sS0FBTixHQUFBO2FBQ3RCLElBQUMsQ0FBQSxNQUFELENBQVEsc0JBQVIsRUFBZ0MsR0FBaEMsRUFBcUMsS0FBckMsRUFEc0I7SUFBQSxDQUF4QjtBQUFBLElBR0EsNEJBQUEsRUFBOEIsU0FBQyxHQUFELEVBQU0sS0FBTixHQUFBO2FBQzVCLElBQUMsQ0FBQSxNQUFELENBQVEsNEJBQVIsRUFBc0MsR0FBdEMsRUFBMkMsS0FBM0MsRUFENEI7SUFBQSxDQUg5QjtBQUFBLElBTUEsMEJBQUEsRUFBNEIsU0FBQyxHQUFELEVBQU0sS0FBTixHQUFBO2FBQzFCLElBQUMsQ0FBQSxNQUFELENBQVEsNEJBQVIsRUFBc0MsR0FBdEMsRUFBMkMsS0FBM0MsRUFEMEI7SUFBQSxDQU41QjtBQUFBLElBU0EsVUFBQSxFQUFZLFNBQUMsR0FBRCxFQUFNLEtBQU4sR0FBQTthQUNWLElBQUMsQ0FBQSxNQUFELENBQVEsZ0JBQVIsRUFBMEIsR0FBMUIsRUFBK0IsS0FBL0IsRUFEVTtJQUFBLENBVFo7QUFBQSxJQVlBLGNBQUEsRUFBZ0IsU0FBQyxHQUFELEVBQU0sS0FBTixHQUFBO2FBQ2QsSUFBQyxDQUFBLE1BQUQsQ0FBUSxnQkFBUixFQUEwQixHQUExQixFQUErQixLQUEvQixFQURjO0lBQUEsQ0FaaEI7QUFBQSxJQWVBLGFBQUEsRUFBZSxTQUFDLEdBQUQsRUFBTSxLQUFOLEdBQUE7YUFDYixJQUFDLENBQUEsTUFBRCxDQUFRLGVBQVIsRUFBeUIsR0FBekIsRUFBOEIsS0FBOUIsRUFE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
+//# sourceURL=/Users/julien/.atom/packages/save-session/lib/config.coffee

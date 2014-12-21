@@ -1,0 +1,316 @@
+@import "colors.less";
+
+.markdown-preview {
+  background-color: #EEE;
+  padding: 10px;
+}
+
+.editor-colors {
+  background-color: @ebony-clay;
+  color: @mountain-meadow;
+}
+
+.editor {
+  background-color: @ebony-clay;
+  color: @mountain-meadow;
+
+  .wrap-guide {
+    background-color: @downy;
+  }
+
+  .indent-guide {
+    color: @turquoise;
+  }
+
+  .invisible-character {
+    color: @turquoise;
+  }
+
+  .gutter {
+    background-color: @pickled-bluewood;
+    color: @light-sea-green;
+    margin-right: @golden-ratio;
+    .line-number {
+      &.cursor-line {
+        background-color: @ming;
+        color: @light-sea-green;
+      }
+
+      &.cursor-line-no-selection {
+        color: @light-sea-green;
+      }
+    }
+  }
+
+  .gutter .line-number.folded,
+  .gutter .line-number:after,
+  .fold-marker:after {
+    color: @ming;
+  }
+
+  .invisible {
+    color: @ming;
+  }
+
+  .cursor {
+    color: @ming;
+  }
+
+  .selection .region {
+    background-color: @pickled-bluewood;
+  }
+}
+
+.editor .search-results .marker .region {
+  background-color: transparent;
+  border: 1px solid @medium-aquamarine;
+}
+
+.editor .search-results .marker.current-result .region {
+  border: 1px solid @medium-aquamarine;
+}
+
+.comment {
+  color: @ebony-clay-comment;
+}
+
+.entity {
+  &.name.type {
+    color: @downy;
+    text-decoration: underline;
+  }
+
+  &.other.inherited-class {
+    color: @downy;
+  }
+}
+
+.keyword {
+  color: @light-sea-green;
+
+  &.control {
+    color: @light-sea-green;
+  }
+
+  &.operator {
+    color: @cascade;
+  }
+
+  &.other.special-method {
+    color: @turquoise;
+  }
+
+  &.other.unit {
+    color: @medium-aquamarine;
+  }
+}
+.storage {
+  color: @cascade;
+}
+
+.constant {
+  color: @light-sea-green;
+
+  &.character.escape {
+    color: @turquoise;
+  }
+
+  &.numeric {
+    color: @medium-aquamarine;
+  }
+
+  &.other.color {
+    color: @ebony-clay;
+  }
+
+  &.other.symbol {
+    color: @downy;
+  }
+}
+
+.variable {
+  color: @downy;
+
+  &.interpolation {
+    color: darken(@downy, 10%);
+  }
+
+  &.parameter.function {
+    color: @medium-aquamarine;
+  }
+}
+
+.invalid.illegal {
+  background-color: @downy;
+  color: @medium-aquamarine;
+}
+
+.string {
+  color: @mountain-meadow;
+  font-style: italic;
+
+  &.regexp {
+    color: @pickled-bluewood;
+
+    .source.ruby.embedded {
+      color: @light-sea-green;
+    }
+  }
+  &.other.link {
+    color: @cascade;
+  }
+}
+
+.punctuation {
+  &.definition {
+    &.comment {
+      color: @ebony-clay-comment;
+    }
+
+    &.string,
+    &.variable,
+    &.parameters,
+    &.array {
+      color: @mountain-meadow;
+    }
+
+    &.heading,
+    &.identity {
+      color: @light-sea-green;
+    }
+
+    &.bold {
+      color: @light-sea-green;
+      font-style: bold;
+    }
+
+    &.italic {
+      color: @turquoise;
+      font-style: italic;
+    }
+  }
+
+  &.section.embedded {
+    color: darken(@cascade, 10%);
+  }
+
+}
+
+.support {
+  &.class {
+    color: @cascade;
+  }
+
+  &.function  {
+    color: lighten(@cascade, 20%);
+
+    &.any-method {
+      color: @cascade;
+    }
+  }
+}
+
+.entity {
+  &.name.function {
+    color: @cascade;
+  }
+
+  &.name.class, &.name.type.class {
+    color: @cascade;
+  }
+
+  &.name.section {
+    color: @cascade;
+  }
+
+  &.name.tag {
+    color: @cascade;
+    padding: 0px 2px;
+  }
+
+  &.other.attribute-name {
+    color: @cascade;
+
+    &.id {
+      color: @cascade;
+    }
+  }
+}
+
+.meta {
+  &.class {
+    color: @downy;
+  }
+
+  &.link {
+    color:@light-sea-green;
+  }
+
+  &.require {
+    color: @downy;
+  }
+
+  &.selector {
+    color: @downy;
+  }
+
+  &.separator {
+    background-color: @cascade;
+    color: @downy;
+  }
+}
+
+.none {
+  color: @cascade;
+}
+
+.markup {
+  &.bold {
+    color: @downy;
+    font-style: bold;
+  }
+
+  &.changed {
+    color: @mountain-meadow;
+  }
+
+  &.deleted {
+    color: @light-sea-green;
+  }
+
+  &.italic {
+    color: @medium-aquamarine;
+    font-style: italic;
+  }
+
+  &.heading .punctuation.definition.heading {
+    color: @turquoise;
+  }
+
+  &.inserted {
+    color: @downy;
+  }
+
+  &.list {
+    color: @mountain-meadow;
+  }
+
+  &.quote {
+    color: @light-sea-green;
+  }
+
+  &.raw.inline {
+    color: @medium-aquamarine;
+  }
+}
+
+.source.gfm .markup {
+  -webkit-font-smoothing: auto;
+  &.heading {
+    color: @cascade;
+  }
+}
+
+.editor.mini .scroll-view {
+  padding-left: 1px;
+}
