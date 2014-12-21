@@ -8,3 +8,8 @@ Thumbs.db
 .OLD
 .SAV
 .netrwhist
+atom.symlink/packages
+atom.symlink/storage
+atom.symlink/themes
+atom.symlink/compile-cache/
+atom.symlink/.node-gyp

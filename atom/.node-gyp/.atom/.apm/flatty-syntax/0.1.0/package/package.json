@@ -1,0 +1,11 @@
+{
+  "name": "flatty-syntax",
+  "theme": "syntax",
+  "version": "0.1.0",
+  "description": "A simple, flat, green and blue syntax theme",
+  "license": "MIT",
+  "repository": "https://github.com/jkswoods/flatty-syntax",
+  "engines": {
+    "atom": ">0.50.0"
+  }
+}

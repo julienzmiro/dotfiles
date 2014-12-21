@@ -1,0 +1,36 @@
+{
+  "name": "flatty-syntax",
+  "theme": "syntax",
+  "version": "0.1.0",
+  "description": "A simple, flat, green and blue syntax theme",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jkswoods/flatty-syntax"
+  },
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "readme": "# Flatty Syntax Theme\n\nFlatty Syntax can be downlaoded from the theme section in atoms settings view. (`cmd-,`).\n\n![A screenshot of Flatty syntax](https://raw.github.com/jkswoods/flatty-syntax/master/screenshot1.png)\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/jkswoods/flatty-syntax/issues"
+  },
+  "homepage": "https://github.com/jkswoods/flatty-syntax",
+  "_id": "flatty-syntax@0.1.0",
+  "dist": {
+    "shasum": "c33b76b90278af6975c4eef9e232043e8365a808"
+  },
+  "_resolved": "/private/var/folders/dv/5vsn7c6925x_g5s2rwdbmwnr0000gp/T/d-1141116-58091-1fjd9x9/package.tgz",
+  "_from": "/private/var/folders/dv/5vsn7c6925x_g5s2rwdbmwnr0000gp/T/d-1141116-58091-1fjd9x9/package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}
