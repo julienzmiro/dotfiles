@@ -14,9 +14,19 @@
 // atom-text-editor .gutter {
 //   padding: 10px 0;
 // }
+
 .editor .gutter {
-  background-color: rgb(33, 50, 65);
+  // background-color: rgb(33, 50, 65);
+  background-color: Crimson;
 }
 .editor .gutter .line-number.cursor-line {
-  background-color: rgb(68, 96, 115);
+  // background-color: rgb(68, 96, 115);
+  background-color: #f93a6a;
+}
+
+.editor .selection .region {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.editor.is-focused  .selection .region {
+  background-color: #4f626f;
 }
